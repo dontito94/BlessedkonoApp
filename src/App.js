@@ -1,13 +1,25 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-class Car extends React.Component {
+class Blessedkono extends React.Component {
+	constructor(props){
+		super(props);
+		this.state = {brand:"BlessedkonoApp"};
+	}
+	changeName =() => {
+		this.setState({brand:"next BlessedkonoApp"})
+	}
   render() {
-    return <h2>Hi, I am a Car!</h2>;
+    return(
+    	<div>
+    	<h1>{this.state.brand}</h1>
+    	<button type="button" onClick = {this.changeName}>Change Name</button>
+    	</div>
+    	) 
   }
 }
 
-export default Car;
+export default Blessedkono;
 
 /*
 Notice that you now have three files in your project:
